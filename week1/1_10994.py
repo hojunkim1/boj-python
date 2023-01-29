@@ -1,4 +1,7 @@
-def add_star(stars):
+def add_star(stars, repeat):
+    if repeat == 0:
+        return stars
+
     height = len(stars)
     new_stars = []
 
@@ -20,21 +23,14 @@ def add_star(stars):
     new_stars.append("*" + new_string2 + "*")
     new_stars.append(new_string1)
 
-    return new_stars
-
-
-def star(repeat):
-    new_stars = ["*"]
-    for _ in range(repeat - 1):
-        new_stars = add_star(new_stars)
-    return new_stars
+    return add_star(new_stars, repeat - 1)
 
 
 def main():
     repeat = int(input())
-    stars = star(repeat)
-    for s in stars:
-        print(s)
+    stars = add_star(["*"], repeat - 1)
+    for star in stars:
+        print(star)
 
 
 if __name__ == '__main__':
