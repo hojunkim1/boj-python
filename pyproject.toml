@@ -6,6 +6,7 @@ authors = ["Hojun Kim <76956067+hojunkim1@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+jupyter = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 
