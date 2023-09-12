@@ -1,1 +1,1 @@
-# Solution of BOJ
+# Solution of BOJ in Python
